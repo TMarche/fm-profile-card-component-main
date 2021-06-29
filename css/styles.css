@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/* Custom properties -- update these for your own design */
+
+:root {
+    --ff-primary: 'Kumbh Sans', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --clr-dark-gray: hsl(0, 0%, 59%);
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* Typography */
+body {
+    font-family: var(--ff-primary);
+}
+
+.text-box__name { 
+    font-weight: var(--fw-bold);
+    font-size: 1.8rem;
+    color: var(--clr-dark-desaturated-blue);
+}
+
+.statistics__count {
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-desaturated-blue);    
+}
+
+.text-box__age {
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    color: var(--clr-dark-gray);
+}
+
+.header-content__city {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--clr-dark-gray);
+}
+
+.statistics__item {
+    text-align: center;
+}
+
+.statistics__count {
+    font-size: 1.8rem;
+}
+
+.statistics__type {
+    color: var(--clr-dark-gray);
+    margin-top: .5rem;
+    font-size: 1rem;
+    letter-spacing: .125rem;;
+}
+
+.break {
+    height: 1px;
+    border: none;
+    background-color: lightgray;
+}
+
+.outer {
+    position: relative;
+    height: 100vh;
+    background-color: var(--clr-dark-cyan);
+    background-image: url("../images/bg-pattern-top.svg")
+}
+
+.inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.card {
+    margin: 0 auto;
+    max-width: 30rem;
+    border-radius: 1rem;
+    box-shadow: var(--bs);
+    font-size: 1.6rem;
+    background-color: white;
+}
+
+.header-pattern {
+    border-radius: 1rem 1rem 0 0;
+    height: 13rem;
+    background-image: url("../images/bg-pattern-card.svg");
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    border-radius: 5rem;
+    box-shadow: 0 0 0 5px white;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-content {
+    padding: 2rem;
+}
+
+.header-content__text-box {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.statistics {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+}
+
+.attribution {
+    margin-top: 4rem;
+}
